@@ -10,6 +10,9 @@ import service.TicketService;
 public class TicketController {
     private TicketService ticketService;
 
+    public TicketController() {
+    }
+
     public TicketController(TicketService ticketService) {
         this.ticketService = ticketService;
     }

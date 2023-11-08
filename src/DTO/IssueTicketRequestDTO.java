@@ -9,6 +9,9 @@ public class IssueTicketRequestDTO {
     private String vehicleMake;
     private int gateId;
 
+    public IssueTicketRequestDTO() {
+    }
+
     public IssueTicketRequestDTO(VehicleType vehicleType, String vehicleNumber, String vehicleColor, String vehicleMake, int gateId) {
         this.vehicleType = vehicleType;
         this.vehicleNumber = vehicleNumber;

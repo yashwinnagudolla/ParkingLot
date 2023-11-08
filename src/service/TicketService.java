@@ -14,6 +14,9 @@ public class TicketService {
     private ParkingLotRepository parkingLotRepository;
     private GateRepository gateRepository;
 
+    public TicketService() {
+    }
+
     public TicketService(TicketRepository ticketRepository, ParkingLotRepository parkingLotRepository, GateRepository gateRepository) {
         this.ticketRepository = ticketRepository;
         this.parkingLotRepository = parkingLotRepository;
