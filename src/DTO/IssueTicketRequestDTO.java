@@ -2,14 +2,14 @@ package DTO;
 
 import models.VehicleType;
 
-public class IsuueTicketRequestDTO {
+public class IssueTicketRequestDTO {
     private VehicleType vehicleType;
     private String vehicleNumber;
     private String vehicleColor;
     private String vehicleMake;
     private int gateId;
 
-    public IsuueTicketRequestDTO(VehicleType vehicleType, String vehicleNumber, String vehicleColor, String vehicleMake, int gateId) {
+    public IssueTicketRequestDTO(VehicleType vehicleType, String vehicleNumber, String vehicleColor, String vehicleMake, int gateId) {
         this.vehicleType = vehicleType;
         this.vehicleNumber = vehicleNumber;
         this.vehicleColor = vehicleColor;
