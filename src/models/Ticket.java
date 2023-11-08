@@ -1,9 +1,20 @@
 package models;
 
+import java.time.LocalDateTime;
+
 public class Ticket extends BaseModel{
     private int ticketId;
     private Vehicle vehicle;
     private ParkingSpot parkingSpot;
+    private LocalDateTime entryTime;
+
+    public LocalDateTime getEntryTime() {
+        return entryTime;
+    }
+
+    public void setEntryTime(LocalDateTime entryTime) {
+        this.entryTime = entryTime;
+    }
 
     public int getTicketId() {
         return ticketId;

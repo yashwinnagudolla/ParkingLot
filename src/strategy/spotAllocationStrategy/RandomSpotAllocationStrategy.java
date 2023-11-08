@@ -1,5 +1,6 @@
 package strategy.spotAllocationStrategy;
 
+import exception.ParkingLotNotFoundException;
 import models.*;
 import repository.ParkingLotRepository;
 
@@ -26,7 +27,7 @@ public class RandomSpotAllocationStrategy implements SpotAllocationStrategy{
                 }
             }
         }
-        return null;
+        throw new ParkingLotNotFoundException("No parking spot available for this vehicle type" + vehicle.getVehicleType().name());
     }
 
 }
