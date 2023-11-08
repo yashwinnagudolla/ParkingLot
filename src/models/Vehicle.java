@@ -22,11 +22,11 @@ public class Vehicle extends BaseModel{
         this.color = color;
     }
 
-    public String getMake() {
+    public String getVehicleMake() {
         return make;
     }
 
-    public void setMake(String make) {
+    public void setVehicleMake(String make) {
         this.make = make;
     }
 
