@@ -2,8 +2,6 @@ package DTO;
 
 import models.Ticket;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class IssueTicketResponseDTO {
@@ -44,23 +42,23 @@ public class IssueTicketResponseDTO {
         this.failureReason = failureReason;
     }
 
-    @Override
-    public String toString() {
+
+    public void printDetails() {
         HashMap<String, String> ticketData = new HashMap<>();
-        ticketData.put("Response", responseStatus.toString());
+        System.out.println("Response" + responseStatus);
         if(responseStatus.equals(ResponseStatus.FAILURE))
-            ticketData.put("Failure message", failureReason);
+            System.out.println("Failure message" + failureReason);
 
-        ticketData.put("Ticket Id", String.valueOf(ticket.getId()));
-        ticketData.put("Vehicle Number", ticket.getVehicle().getNumber());
-        ticketData.put("Vehicle Make", ticket.getVehicle().getVehicleMake());
-        ticketData.put("Parking Spot", String.valueOf(ticket.getParkingSpot().getNumber()));
+        System.out.println("Ticket Id" + ticket.getId());
+        System.out.println("Vehicle Number" + ticket.getVehicle().getNumber());
+        System.out.println("Vehicle Make" +  ticket.getVehicle().getVehicleMake());
+        System.out.println("Parking Spot" + ticket.getParkingSpot().getNumber());
 
-        LocalDateTime entryDateTime = ticket.getEntryTime();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss");
-        ticketData.put("Entry Time", entryDateTime.format(formatter));
+        //LocalDateTime entryDateTime = ticket.getEntryTime();
+        //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss");
+        //System.out.println("Entry Time", entryDateTime.format(formatter));
 
-        return ticketData.toString();
+        //return ticketData.toString();
 
     }
 }

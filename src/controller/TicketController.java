@@ -29,6 +29,7 @@ public class TicketController {
             ticket = ticketService.getTicket(issueTicketRequestDTO.getVehicleType(), issueTicketRequestDTO.getVehicleNumber(), issueTicketRequestDTO.getVehicleColor(),
                     issueTicketRequestDTO.getVehicleMake(), issueTicketRequestDTO.getGateId());
             issueTicketResponseDTO.setResponseStatus(ResponseStatus.SUCCESS);
+            System.out.println("This line executed");
             issueTicketResponseDTO.setTicket(ticket);
         }catch (Exception e){
             issueTicketResponseDTO.setResponseStatus(ResponseStatus.FAILURE);
