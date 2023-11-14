@@ -19,6 +19,7 @@ public class Main {
         TicketRepository ticketRepository = new TicketRepository();
         GateRepository gateRepository = new GateRepository();
 
+
         this.initialisationService = new InitialisationService();
         this.ticketController = new TicketController(new TicketService(ticketRepository,parkingLotRepository,gateRepository));
 
